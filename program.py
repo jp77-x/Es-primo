@@ -10,6 +10,15 @@ def es_primo(numero):
 
     return True
 
+def obtener_lista_primos(inicio, fin):
+    lista_primos =  []
+
+    for i in range(inicio, fin+1):
+        if es_primo(i):
+            lista_primos.append(i) # Agregamos el numero primo a la lista
+
+    print(lista_primos)
+
 num = int(input("Introduce un número para verificar si es primo: "))
 
 if es_primo(num):
@@ -17,9 +26,4 @@ if es_primo(num):
 else:
     print(f"El número {num} NO es primo.")
 
-def imprimir_primos(inicio, fin):
-    for i in range(inicio, fin+1):
-        if es_primo(i):
-            print(i)
-
-imprimir_primos(1, 100)
+obtener_lista_primos(1, 100)
